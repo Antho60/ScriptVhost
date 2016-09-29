@@ -41,7 +41,7 @@ if  [ "${site}" == "" ]; then
   fi
 fi
 mkdir -p /home/$user/www/$site
-chown -R $user /home/$user/www/$site
+chown -R $user:$user /home/$user/www/$site
 touch /etc/apache2/sites-available/$site.conf
 touch /home/$user/www/$site/index.php
 chown -R $user /home/$user/www/$site/index.php
