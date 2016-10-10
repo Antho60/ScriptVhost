@@ -44,7 +44,7 @@ mkdir -p /home/$user/www/$site
 chown -R $user:$user /home/$user/www/$site
 touch /etc/apache2/sites-available/$site.conf
 touch /home/$user/www/$site/index.php
-chown -R $user /home/$user/www/$site/index.php
+chown -R $user:$user /home/$user/www/$site/index.php
 echo "<h1>Bienvenue sur $site</h1>" > /home/$user/www/$site/index.php
 echo "<VirtualHost *:80>
 ServerAdmin webmaster@$site
